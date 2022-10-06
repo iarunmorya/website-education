@@ -1,0 +1,95 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:wght@300;600&family=Nunito:ital,wght@0,200;0,400;0,500;0,600;1,300&family=Poppins:ital,wght@0,100;0,400;0,500;0,600;1,300&display=swap");
+
+$green: #0eb582;
+$light-green: #f0fdfa;
+$light-color: #777;
+$light-white: #eee;
+$black: #444;
+$white: #fff;
+$border: .1rem solid $green;
+$box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+
+// media queries
+
+@media (max-width:1200px){
+    .header{
+        padding: 1rem 5%;
+    }
+
+    section{
+        padding: 3rem 5%;
+    }
+}
+
+@media (max-width:991px){
+    html{
+        font-size: 55%;
+    }
+
+    .header{
+        padding: 2rem;
+    }
+
+    section{
+        padding: 3rem 2rem;
+    }
+}
+
+@media(max-width:768px){
+    .header{
+
+        // very importants menu button abd navbar
+        #menu-btn{
+            display: inline-block;
+        }
+
+        .navbar{
+            position: fixed;
+            top: 0; right: -105%;
+            width: 30rem;
+            background: $white;
+            height: 100%;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            z-index: 1200;
+
+            #close-navbar{
+                display: block;
+            }
+            
+            // active class applied here 
+            &.active{
+                box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
+                right: 0;
+                
+            }
+
+            a{
+                display: block;
+                margin: 1rem 0;
+                text-align: center;
+                font-size: 3rem;
+
+            }
+        }
+    }
+
+    .home .slide .content h3{
+        font-size: 3.5rem;
+    }
+}
+
+@media (max-width:450px){
+    html{
+        font-size: 50%;
+    }
+
+    .heading{
+        font-size: 3rem;
+    }
+
+    .about .content .about-title{
+        font-size: 4rem;
+    }
+}
